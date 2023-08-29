@@ -1,0 +1,12 @@
+name: Contexto
+run-name: Contexts Workflow is running
+on: [push]
+jobs:
+  check-main:
+    if: ${{ github.ref == 'refs/heads/aprendiendo-github-actions' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stage
+      - run: echo "Desplegando en la rama $GITHUB_REF"
+      - name: OS
+      - run: echo "El sistema operativo es ${{ runner.os }}"
