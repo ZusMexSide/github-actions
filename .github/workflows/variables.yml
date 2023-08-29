@@ -10,6 +10,6 @@ jobs:
       SALUDO: Jelou
     steps:
       - name: Saludar
-        run: echo "$SALUDO, $NOMBRE. Hoy es $DIA_DE_SEMANA! $SALUDO"
+        run: echo "$SALUDO, $NOMBRE. Hoy es $DIA_DE_SEMANA! ${{ vars.SALUDO }}"
         env:
           NOMBRE: Daniel
